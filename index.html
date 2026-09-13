@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <meta
+        name="theme-color"
+        content="#03070b"
+    >
+
+    <title>Oculo3D — Interactive Ocular Anatomy</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         OCULO3D APPLICATION ROOT
+         ===================================================== -->
+
+    <main id="app">
+
+        <!-- =================================================
+             TOP BAR
+             ================================================= -->
+
+        <header class="topbar">
+
+            <div class="brand">
+
+                <div class="brand-name">
+                    OCULO<span>3D</span>
+                </div>
+
+                <div class="brand-subtitle">
+                    INTERACTIVE OCULAR ANATOMY
+                </div>
+
+            </div>
+
+            <div class="engine-status">
+                <span class="engine-dot"></span>
+                <span>3D ENGINE ONLINE</span>
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             ANATOMICAL VIEW CONTROLS
+             ================================================= -->
+
+        <section class="anatomy-panel">
+
+            <div class="panel-heading">
+                ANATOMICAL VIEW
+            </div>
+
+            <button
+                class="anatomy-button active"
+                data-view="complete"
+            >
+                Complete Eye
+            </button>
+
+            <button
+                class="anatomy-button"
+                data-view="anterior"
+            >
+                Anterior Segment
+            </button>
+
+            <button
+                class="anatomy-button"
+                data-view="posterior"
+            >
+                Posterior Segment
+            </button>
+
+            <button
+                class="anatomy-button"
+                data-view="optic"
+            >
+                Optic Pathway
+            </button>
+
+            <button
+                class="anatomy-button"
+                data-view="muscles"
+            >
+                Extraocular Muscles
+            </button>
+
+        </section>
+
+
+        <!-- =================================================
+             INFORMATION PANEL
+             ================================================= -->
+
+        <aside class="info-panel">
+
+            <div class="info-label">
+                SELECTED STRUCTURE
+            </div>
+
+            <h2 id="infoTitle">
+                Ocular Globe
+            </h2>
+
+            <p id="infoText">
+                Select an anatomical structure to explore
+                its morphology and clinical significance.
+            </p>
+
+        </aside>
+
+
+        <!-- =================================================
+             CENTER MARKER
+             ================================================= -->
+
+        <div class="center-marker"></div>
+
+
+        <!-- =================================================
+             INTERACTION HINT
+             ================================================= -->
+
+        <div class="interaction-hint">
+            DRAG TO ROTATE&nbsp;&nbsp; • &nbsp;&nbsp;PINCH TO ZOOM&nbsp;&nbsp; • &nbsp;&nbsp;TAP STRUCTURES
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         THREE.JS
+         ===================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+
+
+    <!-- =====================================================
+         OCULO3D ENGINE MODULES
+         ===================================================== -->
+
+    <script src="js/eye.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
